@@ -34,4 +34,14 @@ app.delete("/eventos/:id", (req, res) => {
     res.status(204).send()
 })
 
+app.get("/eventos?ativo=true", (req, res) => {
+    const eventosAtivos = db.listarAtivos()
+    res.status(200).json(eventosAtivos)
+})
+
+app.get("/eventos?modalidade=presencial", (req, res) => {
+    const eventosPresenciais = db.listarPorModalidade("presencial")
+    res.status(200).json(eventosPresenciais)
+})
+
 export default app
