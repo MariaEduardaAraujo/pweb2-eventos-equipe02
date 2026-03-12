@@ -1,1 +1,1 @@
-Integrantes: Davi da Silva e Mª Eduarda de Araújo
+Integrantes: Davi da Silva (Davi-SFerreira) e Mª Eduarda de Araújo (MariaEduardaAraujo)
