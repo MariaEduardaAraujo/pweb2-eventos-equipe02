@@ -79,7 +79,7 @@ app.get("/eventos", (req, res) => {
 })
 
 app.get("/eventos", (req, res) => {
-
+    res.json(db.listarTodos().filter(e => e.vagasDisponiveis >= Number(req.query.vagasMin)))
 })
 
 app.post("/eventos/:id/inscricao", (req, res) => {
@@ -95,7 +95,8 @@ app.post("/eventos/:id/inscricao", (req, res) => {
 })
 
 app.patch("/eventos/:id/cancelar", (req, res) => {
-
+    db.buscarPorId(Number(req.params.id)).ativo = false
+    res.send()
 })
 
 export default app
